@@ -1,0 +1,10 @@
+// Alice Stats
+alice_hp = 20;
+alice_mp = 15;
+alice_str = 5;
+alice_def = 5;
+alice_mag = 5;
+alice_spd = 5;
+alice_level = 1;
+alice_exp = 0;
+alice_exp_require = 150;
