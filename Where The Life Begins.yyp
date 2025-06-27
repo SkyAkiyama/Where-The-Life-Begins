@@ -41,7 +41,8 @@
   "name":"Where The Life Begins",
   "resources":[
     {"id":{"name":"obj_alice","path":"objects/obj_alice/obj_alice.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
+    {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"id":{"name":"Stats","path":"scripts/Stats/Stats.yy",},},
     {"id":{"name":"spr_alice_idle_down","path":"sprites/spr_alice_idle_down/spr_alice_idle_down.yy",},},
     {"id":{"name":"spr_alice_idle_left","path":"sprites/spr_alice_idle_left/spr_alice_idle_left.yy",},},
@@ -64,7 +65,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
+    {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
