@@ -3,16 +3,16 @@ move_speed = 1;
 tilemap = layer_tilemap_get_id("Tiles_Col");
 
 // Setting base stats for Alice from global stat variable
-hp = global.alice_hp;
+hp = get_hp(member.ALICE);
 hp_total = hp;
-mp = global.alice_mp;
+mp = get_mp(member.ALICE);
 mp_total = mp;
-str = global.alice_str;
-mag = global.alice_mag;
-def = global.alice_def;
-spd = global.alice_spd;
+str = get_str(member.ALICE);
+mag = get_mag(member.ALICE);
+def = get_def(member.ALICE);
+agi = get_agi(member.ALICE);
 
 // Alice Level and EXP needed
-level = global.alice_level;
-xp = global.alice_exp;
-xp_require = global.alice_exp_require;
+level = get_level(member.ALICE);
+xp = get_xp(member.ALICE);
+xp_require = get_xp_require(member.ALICE);
