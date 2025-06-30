@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_spells",
+  "%Name":"_stringsetloc",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_spells",
+  "name":"_stringsetloc",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
