@@ -1,4 +1,4 @@
- var menu_move = keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+var menu_move = keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
 
 menu_index += menu_move;
 
