@@ -16,6 +16,12 @@ option[1, 1] = "Brightness";
 option[1, 2] = "Controls";
 option[1, 3] = "Back";
 
+//Window Size Menu
+option[2, 0] = "Default";
+option[2, 1] = "2x";
+option[2, 2] = "Fullscreen";
+option[2, 3] = "Back";
+
 op_length = 0;
 
 pos = 0;

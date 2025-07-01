@@ -2,6 +2,7 @@
 var up_key = keyboard_check_pressed(vk_up);
 var down_key = keyboard_check_pressed(vk_down);
 var accept_key = keyboard_check_pressed(ord("Z"));
+var cancel_key = keyboard_check_pressed(ord("X"));
 
 //Store number of options in current menu
 op_length = array_length(option[menu_level])
@@ -37,7 +38,7 @@ if accept_key
                 //New Game
                 case 0:
                     audio_play_sound(snd_menu_confirm, 1, false);
-                    room_goto(rm_test);
+                    room_goto(rm_text_test);
                 break;
                 
                 //Options
@@ -59,7 +60,8 @@ if accept_key
             {
                 //Window Size
                 case 0:
-                    //Settings here
+                    audio_play_sound(snd_menu_confirm, 1, false);
+                    menu_level = 2;
                 break;
                 
                 //Brightness
@@ -76,6 +78,74 @@ if accept_key
                 case 3:
                     audio_play_sound(snd_menu_back, 1, false)
                     menu_level = 0;
+                break;
+            }
+        break;
+        
+        //Window Size Menu
+        case 2:
+            switch (pos)
+            {
+                //Default Size
+                case 0:
+                    if (global.is_fullscreen = false) 
+                    {
+                        audio_play_sound(snd_menu_confirm, 1, false);
+                        window_set_size(640, 480);
+                        window_center();
+                    }
+                    else 
+                    {
+                        audio_play_sound(snd_menu_confirm, 1, false);
+                        window_set_fullscreen(false); 
+                        window_enable_borderless_fullscreen(false);
+                        window_set_size(640, 480);
+                        window_center();
+                        global.is_fullscreen = false;
+                    }
+                break;
+                
+                //2x Default Size
+                case 1:
+                    if (global.is_fullscreen = false)
+                    {
+                        audio_play_sound(snd_menu_confirm, 1, false);
+                        window_set_size(1280, 960);
+                        window_center();
+                    }
+                    else 
+                    {
+                        audio_play_sound(snd_menu_confirm, 1, false);
+                        window_set_fullscreen(false); 
+                        window_enable_borderless_fullscreen(false);
+                        window_set_size(1280, 960);
+                        window_center();
+                        global.is_fullscreen = false;
+                    }
+                break;
+                
+                //Set Fullscreen
+                case 2:
+                    if (global.is_fullscreen = false)
+                    {
+                        audio_play_sound(snd_menu_confirm, 1, false);
+                        window_enable_borderless_fullscreen(true);
+                        window_set_fullscreen(true);
+                        global.is_fullscreen = true;
+                    }
+                    else 
+                    {
+                        audio_play_sound(snd_menu_confirm, 1, false);
+                        window_enable_borderless_fullscreen(false);
+                        window_set_fullscreen(false);
+                        global.is_fullscreen = false;
+                    }
+                break;
+                
+                //Return to Settings Menu
+                case 3:
+                    audio_play_sound(snd_menu_back, 1, false);
+                    menu_level = 1;
                 break;
             }
     }
