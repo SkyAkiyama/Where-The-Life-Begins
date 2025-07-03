@@ -1,18 +1,24 @@
+//Disables moving when textbox exists on screen
+if (instance_exists(obj_textbox))
+{
+    exit;
+}
+
 var _hor = keyboard_check(vk_right) - keyboard_check(vk_left);
 var _ver = keyboard_check(vk_down) - keyboard_check(vk_up);
 
 if (keyboard_check(ord("X")))
 {
-    move_speed = 2;
+    move_speed = 3;
     
-    if (move_speed > 2)
+    if (move_speed > 3)
     {
-        move_speed = 2;
+        move_speed = 3;
     }
 }
 else 
 {
-    move_speed = 1;
+    move_speed = 2;
 }
 
 move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, undefined, undefined, undefined, move_speed, move_speed);

@@ -1,12 +1,4 @@
-if (instance_exists(obj_alice) && distance_to_object(obj_alice) < 8)
+if ((keyboard_check_pressed(input_key)) && distance_to_object(obj_alice) < 8 && instance_exists(obj_textbox) = false)
 {
-    can_interact = true
-    if (keyboard_check_pressed(input_key))
-    {
-        create_dialog(dialog);
-    }
-}
-else 
-{
-    can_interact = false;
+    create_textbox(text_id);
 }

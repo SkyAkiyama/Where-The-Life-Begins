@@ -1,7 +1,42 @@
-/// @param {string}
+function scr_set_defaults_for_text()
+{
+    line_break_pos[0, page_number] = 999;
+    line_break_num[page_number] = 0;
+    line_break_offset[page_number] = 0;
+    
+    txtb_spr[page_number] = spr_textbox;
+    speaker_sprite[page_number] = noone;
+    speaker_side[page_number] = 1;
+    snd[page_number] = snd_alice_speak;
+}
+
+
+/// @param {string} _text
+/// @param {string} [character] description
+/// @param {integer} [side] description
 function scr_text(_text)
 {
+    scr_set_defaults_for_text();
+    
     text[page_number] = _text;
+    
+    //get character info
+    if (argument_count > 1)
+    {
+        switch (argument[1]) 
+        {
+            case "Alice":
+                speaker_sprite[page_number] = spr_alice_speak;
+                snd[page_number] = snd_alice_speak;
+            break;
+        }
+    }
+    
+    //side the character is on
+    if (argument_count > 2)
+    {
+        speaker_side[page_number] = argument[2];
+    }
     
     page_number++;
 }

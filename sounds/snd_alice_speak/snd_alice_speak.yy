@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_alice_speak",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.04995465,
+  "name":"snd_alice_speak",
+  "parent":{
+    "name":"Speaking",
+    "path":"folders/Sounds/Speaking.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_alice_speak.wav",
+  "type":0,
+  "volume":1.0,
+}

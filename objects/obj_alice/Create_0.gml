@@ -1,5 +1,5 @@
 // Move Speed and grabbing collision layer
-move_speed = 1;
+move_speed = 2;
 tilemap = layer_tilemap_get_id("Tiles_Col");
 
 // Setting base stats for Alice from global stat variable
